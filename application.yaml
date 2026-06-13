@@ -13,7 +13,7 @@ spec:
         valueFiles:
           - $values/values/mlflow-values.yaml
     - repoURL: https://github.com/olita16/goit-argo-mlflow.git
-      targetRevision: lesson-7
+      targetRevision: main
       ref: values
   destination:
     server: https://kubernetes.default.svc
