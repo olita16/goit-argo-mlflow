@@ -39,5 +39,3 @@ image:
 extraArgs:
   workers: "1"
   default-artifact-root: "/tmp/mlruns"
-  allowed-hosts: "localhost,127.0.0.1,0.0.0.0"
-  cors-allowed-origins: "http://localhost:5000"
