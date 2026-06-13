@@ -1,0 +1,36 @@
+replicaCount: 1
+
+service:
+  enabled: true
+  type: ClusterIP
+  port: 5000
+
+auth:
+  enabled: false
+
+postgresql:
+  enabled: false
+
+mysql:
+  enabled: false
+
+backendStore:
+  defaultSqlitePath: /tmp/mlflow.db
+  databaseConnectionCheck: false
+  databaseMigration: false
+
+artifactRoot:
+  defaultArtifactsDestination: /tmp/mlartifacts
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    memory: 1Gi
+
+extraArgs:
+  workers: "1"
+
+extraEnvVars:
+  MLFLOW_DISABLE_ENV_MANAGER: "true"
