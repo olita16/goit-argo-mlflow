@@ -27,10 +27,14 @@ resources:
     cpu: 50m
     memory: 128Mi
   limits:
-    memory: 1Gi
+    memory: 768Mi
 
 extraArgs:
   workers: "1"
 
 extraEnvVars:
   MLFLOW_DISABLE_ENV_MANAGER: "true"
+
+image:
+  repository: ghcr.io/mlflow/mlflow
+  tag: v2.22.0
