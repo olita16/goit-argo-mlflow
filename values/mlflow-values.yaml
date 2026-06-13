@@ -20,7 +20,7 @@ backendStore:
   databaseMigration: false
 
 artifactRoot:
-  defaultArtifactsDestination: /tmp/mlartifacts
+  defaultArtifactsDestination: /tmp/mlruns
 
 resources:
   requests:
@@ -29,12 +29,13 @@ resources:
   limits:
     memory: 768Mi
 
-extraArgs:
-  workers: "1"
-
 extraEnvVars:
   MLFLOW_DISABLE_ENV_MANAGER: "true"
 
 image:
   repository: ghcr.io/mlflow/mlflow
   tag: v2.22.0
+
+extraArgs:
+  workers: "1"
+  default-artifact-root: "/tmp/mlruns"
